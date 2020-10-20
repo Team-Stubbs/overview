@@ -1,7 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017";
-//connection url
-const dbName = 'stubbs'
+const dbName = 'stubbs';
 let db;
 let mongoClient;
 
@@ -39,6 +38,7 @@ const findStyles = (productId)=> {
     })
   });
 }
+
 const findSkus = (productId)=> {
   return new Promise((resolve, reject) => {
     db.collection('skus').findOne({'productId': productId}, (err, data) => {
@@ -50,6 +50,7 @@ const findSkus = (productId)=> {
     })
   });
 }
+
 const findPhotos = (productId)=> {
   return new Promise((resolve, reject) => {
     db.collection('photos').findOne({'productId': productId}, (err, data) => {
@@ -61,6 +62,7 @@ const findPhotos = (productId)=> {
     })
   });
 }
+
 const findFeatures = (productId)=> {
   return new Promise((resolve, reject) => {
     db.collection('features').findOne({'productId': productId}, (err, data) => {
@@ -148,12 +150,12 @@ const getProductData = (productId, callback) => {
       throw new Error('No Product found');
     }
     //we insert into our database
+    //then we send back data
     let formatted = formatAllData(results);
     insertCompleteProduct(formatted);
     callback(null, formatted);
   })
   .catch((err) => {
-    // console.log('Error:', err);
     callback(err, null);
   })
 }
