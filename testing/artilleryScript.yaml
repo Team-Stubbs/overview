@@ -3,7 +3,7 @@ config:
     phases:
       - duration: 60 
         arrivalRate: 1   #start slow
-        rampTo: 50   #rampTo: or maxVusers:
+        rampTo: 100   #rampTo: or maxVusers:
         # maxVusers: 100
     processor: "./randomProduct.js"
 scenarios:

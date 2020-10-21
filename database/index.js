@@ -145,14 +145,16 @@ const getProductData = (productId, callback) => {
   let skus = findSkus(id);
   let features = findFeatures(id);
   Promise.all([product, style, skus, photos, features])
+  product
   .then((results) => {
-    if (!results[0]) {
-      throw new Error('No Product found');
-    }
-    let formatted = formatAllData(results);
+    // if (!results[0]) {
+    //   throw new Error('No Product found');
+    // }
+    // console.log(results);
+    // let formatted = formatAllData(results);
     // we can insert into our database a full object product 
-    insertCompleteProduct(formatted);
-    callback(null, formatted);
+    // insertCompleteProduct(formatted);
+    callback(null, results);
   })
   .catch((err) => {
     callback(err, null);

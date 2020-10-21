@@ -1,0 +1,44 @@
+{
+  "aggregate": {
+    "timestamp": "2020-10-21T20:21:07.506Z",
+    "scenariosCreated": 24410,
+    "scenariosCompleted": 24410,
+    "requestsCompleted": 24410,
+    "latency": {
+      "min": 1.2,
+      "max": 2470.8,
+      "median": 12.6,
+      "p95": 33.5,
+      "p99": 107.1
+    },
+    "rps": {
+      "count": 24410,
+      "mean": 265.12
+    },
+    "scenarioDuration": {
+      "min": 2.3,
+      "max": 2498.5,
+      "median": 15,
+      "p95": 37.2,
+      "p99": 146.3
+    },
+    "scenarioCounts": {
+      "0": 24410
+    },
+    "errors": {},
+    "codes": {
+      "200": 24410
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 60,
+        "arrivalRate": 1,
+        "rampTo": 800
+      }
+    ]
+  }
+}
