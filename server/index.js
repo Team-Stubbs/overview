@@ -3,7 +3,7 @@ const cache = new LRU({max: 250})
 const cors = require('cors');
 const express = require('express');
 const app = express();
-const PORT = 4000;
+const PORT = 8000;
 const dbMethods = require('../database/index.js');
 
 app.use(cors());
@@ -27,5 +27,5 @@ app.get('/product/:productId', (req, res) => {
 });
 3
 app.listen(PORT, () => {
-  console.log(`Listening at http://localhost:${PORT}`);
+  console.log(`Listening at PORT:{PORT}`);
 });
