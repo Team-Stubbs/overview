@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Team-Stubbs/overview#readme",
   "dependencies": {
     "axios": "^0.20.0",
+    "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
     "express": "^4.17.1",
     "install": "^0.13.0",
