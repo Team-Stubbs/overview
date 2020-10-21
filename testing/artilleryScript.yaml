@@ -1,0 +1,13 @@
+config:
+    target: "http://localhost:4000" # default target
+    phases:
+      - duration: 60 
+        arrivalRate: 1   #start slow
+        rampTo: 50   #rampTo: or maxVusers:
+        # maxVusers: 100
+    processor: "./randomProduct.js"
+scenarios:
+- flow:
+  - get:
+      url: "/"
+      beforeRequest: "randomProductId" 

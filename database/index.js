@@ -4,7 +4,7 @@ const dbName = 'stubbs';
 let db;
 let mongoClient;
 
-MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology:true},
+MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology: true},
   ( err, client ) => {
   if (err) {
     console.log('Connection error to mongodb:', err);
@@ -149,9 +149,8 @@ const getProductData = (productId, callback) => {
     if (!results[0]) {
       throw new Error('No Product found');
     }
-    //we insert into our database
-    //then we send back data
     let formatted = formatAllData(results);
+    // we can insert into our database a full object product 
     insertCompleteProduct(formatted);
     callback(null, formatted);
   })

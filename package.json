@@ -22,8 +22,12 @@
     "csvtojson": "^2.0.10",
     "express": "^4.17.1",
     "install": "^0.13.0",
+    "lru-cache": "^6.0.0",
     "mongodb": "^3.6.2",
     "nodemon": "^2.0.5",
     "npm": "^6.14.8"
+  },
+  "devDependencies": {
+    "artillery": "^1.6.1"
   }
 }

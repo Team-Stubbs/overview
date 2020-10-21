@@ -1,6 +1,6 @@
 const fs = require('fs');
 const readStream = fs.createReadStream('/Users/milito/bigData/photosToJson.json');
-const writeStream = fs.createWriteStream('/Users/milito/bigData/photosToMongo.json');
+// const writeStream = fs.createWriteStream('/Users/milito/bigData/photosToMongo.json');
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -30,10 +30,10 @@ const formatSkus = (data) => {
     photoDocument.totalStyles++;
     // rl.resume()
   } else {
-    // console.log(photoDocument);
+    console.log(photoDocument);
     //lets write the file to JSON
-    writeStream.write(JSON.stringify(photoDocument)), () => {
-    }
+    // writeStream.write(JSON.stringify(photoDocument)), () => {
+    // }
     currentStyleId = parseInt(data.styleId);
     //reset the object
     photoDocument = { 
