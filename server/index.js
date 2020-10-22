@@ -27,5 +27,5 @@ app.get('/product/:productId', (req, res) => {
 });
 3
 app.listen(PORT, () => {
-  console.log(`Listening at PORT:{PORT}`);
+  console.log(`Listening at PORT:${PORT}`);
 });
